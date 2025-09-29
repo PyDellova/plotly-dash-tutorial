@@ -11,7 +11,7 @@ x = np.linspace(0, 10, 500)
 app.layout = html.Div([
     html.H1("Interactive sine"),
 
-    html.Label("Fréquence"),
+    html.Label("Frequency"),
     dcc.Slider(
         id="freq-slider",
         min=0.5, max=5, step=0.1, value=1.0,
@@ -34,8 +34,8 @@ app.layout = html.Div([
      Input("phase-slider", "value")]
 )
 def update_graph(freq, phase):
-    df = pd.DataFrame({"x": x, "y": np.sin(freq * x + phase)})
-    fig = px.line(df, x="x", y="y", title=f"sin({freq:.1f}·x + {phase:.2f})")
+    y = np.sin(freq * x + phase)
+    fig = px.line(x=x, y=y, title=f"sin({freq:.1f}·x + {phase:.2f})")
     return fig
 
 server = app.server  # nécessaire pour Render
