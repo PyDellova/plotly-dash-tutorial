@@ -9,7 +9,7 @@ This tutorial shows how to transform a sine curve into an **interactive web app*
 1. Clone the repo:
 
 ```
-git clone n https://github.com/PyDellova/plotly-dash-tutorial.git
+git clone https://github.com/PyDellova/plotly-dash-tutorial.git
 cd plotly-dash-tutorial
 ```
 
